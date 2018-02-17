@@ -8,6 +8,7 @@
 ### Example usage
 
 `https://localhost:8080/December%2015,%202015`
+
 `https://localhost:8080/1450137600`
 
 ### Example output:
