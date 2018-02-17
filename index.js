@@ -12,13 +12,13 @@ app.get('/:timeparam',function(req,res){
     function timeReturn(inputTime){
         var t=new Date(inputTime);
         var time={
-            unix:t.valueOf(),
+            unix:Math.floor(t.valueOf()/1000),
             natural:months[t.getMonth()]+" "+t.getDate()+", "+t.getFullYear()
         }
         res.send(time);
     }
     if(inputTime.match(regexUnix)&&(new Date(parseInt(inputTime)))!="Invalid Date"){
-        timeReturn(parseInt(inputTime));
+        timeReturn(parseInt(inputTime)*1000);
     }
     else if(inputTime.match(regexNatural)&&(new Date(inputTime))!="Invalid Date"){
         timeReturn(inputTime);
@@ -31,5 +31,7 @@ app.get('/:timeparam',function(req,res){
         res.send(time);
     }
 });
-app.listen(80);
-console.log("Server started on port 80");
+// listen for requests :)
+var listener = app.listen(process.argv[2], function () {
+  console.log('Your app is listening on port ' + listener.address().port);
+});
