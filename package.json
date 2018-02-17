@@ -1,0 +1,27 @@
+{
+  "name": "timestamp-microservice",
+  "version": "1.0.0",
+  "description": "Freecodecamp back end project 1: Timestamp microservice >> To return JSON object containing both unixtime & natural time",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rajatkantinandi/timestamp-fcc.git"
+  },
+  "keywords": [
+    "Timestamp",
+    "FCC",
+    "Back-end-project"
+  ],
+  "author": "Rajat Kanti Nandi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rajatkantinandi/timestamp-fcc/issues"
+  },
+  "homepage": "https://github.com/rajatkantinandi/timestamp-fcc#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
